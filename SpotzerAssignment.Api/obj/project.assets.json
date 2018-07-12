@@ -2735,6 +2735,19 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Ninject/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Ninject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ninject.dll": {}
+        }
+      },
       "Remotion.Linq/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -4755,6 +4768,19 @@
         },
         "runtime": {
           "bin/placeholder/SpotzerAssignment.Model.dll": {}
+        }
+      },
+      "SpotzerAssignment.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "SpotzerAssignment.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SpotzerAssignment.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpotzerAssignment.Service.dll": {}
         }
       }
     }
@@ -7566,6 +7592,19 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Ninject/3.3.4": {
+      "sha512": "CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
+      "type": "package",
+      "path": "ninject/3.3.4",
+      "files": [
+        "lib/net45/Ninject.dll",
+        "lib/net45/Ninject.xml",
+        "lib/netstandard2.0/Ninject.dll",
+        "lib/netstandard2.0/Ninject.xml",
+        "ninject.3.3.4.nupkg.sha512",
+        "ninject.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -12540,13 +12579,20 @@
       "type": "project",
       "path": "../SpotzerAssignment.Model/SpotzerAssignment.Model.csproj",
       "msbuildProject": "../SpotzerAssignment.Model/SpotzerAssignment.Model.csproj"
+    },
+    "SpotzerAssignment.Service/1.0.0": {
+      "type": "project",
+      "path": "../SpotzerAssignment.Service/SpotzerAssignment.Service.csproj",
+      "msbuildProject": "../SpotzerAssignment.Service/SpotzerAssignment.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
-      "SpotzerAssignment.Model >= 1.0.0"
+      "Ninject >= 3.3.4",
+      "SpotzerAssignment.Model >= 1.0.0",
+      "SpotzerAssignment.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12580,12 +12626,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nexus.disney.com/nexus/service/local/nuget/studios-nuget/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Service\\SpotzerAssignment.Service.csproj": {
+              "projectPath": "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Service\\SpotzerAssignment.Service.csproj"
+            },
             "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Model\\SpotzerAssignment.Model.csproj": {
               "projectPath": "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Model\\SpotzerAssignment.Model.csproj"
             }
@@ -12609,6 +12657,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "Ninject": {
+            "target": "Package",
+            "version": "[3.3.4, )"
           }
         },
         "imports": [

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpotzerAssignment.Service
 {
-    interface IService<T>
+    public interface IService<T>
     {
         void Save(T entity);
     }

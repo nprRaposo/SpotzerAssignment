@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SpotzerAssignment.Model\SpotzerAssignment.Model.csproj" />
+    <ProjectReference Include="..\SpotzerAssignment.Service\SpotzerAssignment.Service.csproj" />
   </ItemGroup>
 
 </Project>
