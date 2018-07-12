@@ -1,2 +1,0 @@
-C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Tests\obj\Debug\SpotzerAssignment.Tests.csprojResolveAssemblyReference.cache
-C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Tests\obj\Debug\SpotzerAssignment.Tests.csproj.CoreCompileInputs.cache
