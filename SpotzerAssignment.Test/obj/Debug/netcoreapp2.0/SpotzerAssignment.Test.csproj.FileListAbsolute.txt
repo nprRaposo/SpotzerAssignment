@@ -12,3 +12,7 @@ C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssi
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.AssemblyInfo.cs
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.dll
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.pdb
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Service.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Service.pdb
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.pdb

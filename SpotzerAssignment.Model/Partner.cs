@@ -8,6 +8,8 @@ namespace SpotzerAssignment.Model
     {
         public string PartnerId { get; set; }
 
+        public string PartnerType { get; set; }
+
         public IEnumerable<ProductTypeEnum> SupportedSellings { get; set; }
     }
 }

@@ -23,6 +23,6 @@ namespace SpotzerAssignment.Model
         public string RelatedOrder { get; set; }
 
 
-        public IEnumerable<Line> Lines { get; set; }
+        public List<Line> Lines { get; set; }
     }
 }

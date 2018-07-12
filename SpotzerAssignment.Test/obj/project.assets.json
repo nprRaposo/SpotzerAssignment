@@ -1611,6 +1611,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "SpotzerAssignment.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SpotzerAssignment.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpotzerAssignment.Model.dll": {}
+        }
+      },
+      "SpotzerAssignment.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "SpotzerAssignment.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SpotzerAssignment.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpotzerAssignment.Service.dll": {}
+        }
       }
     }
   },
@@ -5683,6 +5706,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "SpotzerAssignment.Model/1.0.0": {
+      "type": "project",
+      "path": "../SpotzerAssignment.Model/SpotzerAssignment.Model.csproj",
+      "msbuildProject": "../SpotzerAssignment.Model/SpotzerAssignment.Model.csproj"
+    },
+    "SpotzerAssignment.Service/1.0.0": {
+      "type": "project",
+      "path": "../SpotzerAssignment.Service/SpotzerAssignment.Service.csproj",
+      "msbuildProject": "../SpotzerAssignment.Service/SpotzerAssignment.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5690,7 +5723,8 @@
       "MSTest.TestAdapter >= 1.2.0",
       "MSTest.TestFramework >= 1.2.0",
       "Microsoft.NET.Test.Sdk >= 15.5.0",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "SpotzerAssignment.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5729,7 +5763,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Service\\SpotzerAssignment.Service.csproj": {
+              "projectPath": "C:\\Users\\nicolas.raposo\\Documents\\mine\\src\\Spotzer\\SpotzerAssignment\\SpotzerAssignment.Service\\SpotzerAssignment.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
