@@ -3,18 +3,18 @@ using System;
 
 namespace SpotzerAssignment.Data
 {
-    public class OrderRepository: IRepository<Order>
+    public class PaidSearchProductRepository : IRepository<PaidSearchProductLine>
     {
         private readonly SpotzerContext _context;
 
-        public OrderRepository(SpotzerContext context)
+        public PaidSearchProductRepository(SpotzerContext context)
         {
             this._context = context;
         }
 
-        public void Save(Order entity)
+        public void Save(PaidSearchProductLine entity)
         {
-            this._context.Orders.Add(entity);
+            this._context.PaidSearchProductLine.Add(entity);
             this._context.SaveChanges();
         }
     }

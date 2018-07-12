@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SpotzerAssignment.Data\SpotzerAssignment.Data.csproj" />
     <ProjectReference Include="..\SpotzerAssignment.Model\SpotzerAssignment.Model.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,5 @@
-﻿using SpotzerAssignment.Model;
+﻿using SpotzerAssignment.Data;
+using SpotzerAssignment.Model;
 using SpotzerAssignment.Model.DTO;
 using SpotzerAssignment.Model.Exception;
 using System;
@@ -8,9 +9,40 @@ namespace SpotzerAssignment.Service
 {
     public class OrderService : IService<OrderDTO>
     {
+        #region OrderService Data
+        private readonly IRepository<Order> _orderRepository;
+        private readonly IRepository<PaidSearchProductLine> _paidSearchProductRepository;
+        private readonly IRepository<WebSiteProductLine> _webSiteProductRepository;
+
+        public OrderService(IRepository<Order> orderRepository, IRepository<PaidSearchProductLine> paidSearchProductRepository, IRepository<WebSiteProductLine> webSiteProductRepository)
+        {
+            this._orderRepository = orderRepository;
+            this._paidSearchProductRepository = paidSearchProductRepository;
+            this._webSiteProductRepository = webSiteProductRepository;
+        } 
+        #endregion
+
         public void Save(OrderDTO orderDTO)
         {
             var order = this.FromDto(orderDTO);
+            var lines = this.GetLinesFromOrder(orderDTO);
+
+            this._orderRepository.Save(order);
+
+            foreach (var productLine in lines)
+            {
+                productLine.Order = order;
+
+                if (productLine is WebSiteProductLine)
+                {
+                    this._webSiteProductRepository.Save(productLine as WebSiteProductLine);
+                }
+
+                if (productLine is PaidSearchProductLine)
+                {
+                    this._paidSearchProductRepository.Save(productLine as PaidSearchProductLine);
+                }
+            }
         }
 
         #region Private Helpers
@@ -40,15 +72,20 @@ namespace SpotzerAssignment.Service
                 order.RelatedOrder = orderDTO.RelatedOrder;
             }
 
-            order.Lines = new List<Line>();
+            return order;
+        }
+
+        private IEnumerable<Line> GetLinesFromOrder(OrderDTO orderDTO)
+        {
+            var lines = new List<Line>();
 
             foreach (var lineDto in orderDTO.LineItems)
             {
                 this.CheckProductWithPartner(orderDTO.Partner, lineDto);
-                order.Lines.Add(this.GetLineFromDTO(lineDto));
+                lines.Add(this.GetLineFromDTO(lineDto));
             }
 
-            return order;
+            return lines;
         }
 
         private Line GetLineFromDTO(LineDTO lineDto)

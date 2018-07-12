@@ -16,3 +16,5 @@ C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssi
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Service.dll
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Service.pdb
 C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.pdb
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Data.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Data.pdb

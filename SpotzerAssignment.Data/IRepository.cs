@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpotzerAssignment.Data
 {
-    interface IRepository <T>
+    public interface IRepository <T>
     {
         void Save(T entity);
     }

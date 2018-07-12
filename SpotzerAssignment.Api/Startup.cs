@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,8 @@ using Microsoft.Extensions.Options;
 using Ninject;
 using Ninject.Activation;
 using Ninject.Infrastructure.Disposal;
+using SpotzerAssignment.Data;
+using SpotzerAssignment.Model;
 using SpotzerAssignment.Model.DTO;
 using SpotzerAssignment.Service;
 
@@ -40,7 +43,6 @@ namespace SpotzerAssignment.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddRequestScopingMiddleware(() => scopeProvider.Value = new Scope());
             services.AddCustomControllerActivation(Resolve);
@@ -70,8 +72,19 @@ namespace SpotzerAssignment.Api
                 kernel.Bind(ctrlType).ToSelf().InScope(RequestScope);
             }
 
+
+            var options = new DbContextOptionsBuilder<SpotzerContext>()
+                .UseInMemoryDatabase(databaseName: "SpotzerContext")
+                .Options;
+
+            var context = new SpotzerContext(options);
+
             // This is where our bindings are configurated
             kernel.Bind<IService<OrderDTO>>().To<OrderService>().InScope(RequestScope);
+            kernel.Bind<IRepository<Order>>().To<OrderRepository>().InScope(RequestScope);
+            kernel.Bind<IRepository<PaidSearchProductLine>>().To<PaidSearchProductRepository>().InScope(RequestScope);
+            kernel.Bind<IRepository<WebSiteProductLine>>().To<WebSiteProductRepository>().InScope(RequestScope);
+            kernel.Bind<SpotzerContext>().ToConstant(context);
 
             // Cross-wire required framework services
             kernel.BindToMethod(app.GetRequestService<IViewBufferScope>);
