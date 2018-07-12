@@ -1,0 +1,9 @@
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.deps.json
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\bin\Debug\netcoreapp2.0\SpotzerAssignment.Model.pdb
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.csprojResolveAssemblyReference.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.csproj.CoreCompileInputs.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.AssemblyInfoInputs.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.AssemblyInfo.cs
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Model\obj\Debug\netcoreapp2.0\SpotzerAssignment.Model.pdb

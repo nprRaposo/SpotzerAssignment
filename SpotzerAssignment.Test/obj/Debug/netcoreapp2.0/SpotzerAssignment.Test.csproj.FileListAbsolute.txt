@@ -1,0 +1,14 @@
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Test.deps.json
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Test.runtimeconfig.json
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Test.runtimeconfig.dev.json
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Test.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\bin\Debug\netcoreapp2.0\SpotzerAssignment.Test.pdb
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.csprojResolveAssemblyReference.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.csproj.CoreCompileInputs.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.AssemblyInfoInputs.cache
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.AssemblyInfo.cs
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.dll
+C:\Users\nicolas.raposo\Documents\mine\src\Spotzer\SpotzerAssignment\SpotzerAssignment.Test\obj\Debug\netcoreapp2.0\SpotzerAssignment.Test.pdb
