@@ -6,6 +6,6 @@ namespace SpotzerAssignment.Service
 {
     public interface IService<T>
     {
-        void Save(T entity);
+        int Save(T entity);
     }
 }

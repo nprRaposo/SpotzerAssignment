@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SpotzerAssignment.Model;
 using SpotzerAssignment.Model.DTO;
+using SpotzerAssignment.Model.Exception;
 using SpotzerAssignment.Service;
 
 namespace SpotzerAssignment.Api.Controllers
@@ -22,15 +25,22 @@ namespace SpotzerAssignment.Api.Controllers
         #endregion
 
         [HttpPost]
-        public void Post([FromBody]OrderDTO order)
+        public IActionResult Post([FromBody]OrderDTO order)
         {
+            var returnMessage = new ApiResponseMessage();
+
             try
             {
-                this._orderService.Save(order);
+                var id = this._orderService.Save(order);
+                returnMessage.Success = true;
+                returnMessage.Message = "Order " + id + " created";
+                return Ok(returnMessage);
             }
-            catch (Exception ex)
+            catch (ProductNotSupportedException ex)
             {
-                throw;
+                returnMessage.Success = false;
+                returnMessage.Message = ex.Message;
+                return BadRequest(returnMessage);
             }
         }
 

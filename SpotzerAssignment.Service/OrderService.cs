@@ -22,7 +22,7 @@ namespace SpotzerAssignment.Service
         } 
         #endregion
 
-        public void Save(OrderDTO orderDTO)
+        public int Save(OrderDTO orderDTO)
         {
             var order = this.FromDto(orderDTO);
             var lines = this.GetLinesFromOrder(orderDTO);
@@ -43,6 +43,8 @@ namespace SpotzerAssignment.Service
                     this._paidSearchProductRepository.Save(productLine as PaidSearchProductLine);
                 }
             }
+
+            return order.Id;
         }
 
         #region Private Helpers
@@ -128,10 +130,10 @@ namespace SpotzerAssignment.Service
 
         private void CheckProductWithPartner(string partner, LineDTO lineDto)
         {
-            if (partner == PartnerTypes.PartnerA && lineDto.AdWordCampaign != null)
+            if (partner.Equals(PartnerTypes.PartnerA, StringComparison.InvariantCultureIgnoreCase)&& lineDto.AdWordCampaign != null)
                 throw new ProductNotSupportedException("Partner A not support PaidSearch");
 
-            if (partner == PartnerTypes.PartnerD && lineDto.WebsiteDetails != null)
+            if (partner.Equals(PartnerTypes.PartnerD, StringComparison.InvariantCultureIgnoreCase) && lineDto.WebsiteDetails != null)
                 throw new ProductNotSupportedException("Partner D not support WebSite Product");
         } 
         #endregion
