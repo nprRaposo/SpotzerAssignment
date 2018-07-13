@@ -46,9 +46,8 @@ namespace SpotzerAssignment.Service
 
             return order.Id;
         }
-
-        #region Private Helpers
-        private Order FromDto(OrderDTO orderDTO)
+        
+        public Order FromDto(OrderDTO orderDTO)
         {
             var order = new Order();
             order.Partner = orderDTO.Partner;
@@ -58,16 +57,17 @@ namespace SpotzerAssignment.Service
             order.CompanyId = orderDTO.CompanyId;
             order.CompanyName = orderDTO.CompanyName;
 
-            if (orderDTO.Partner == PartnerTypes.PartnerA)
+            if (orderDTO.Partner.Equals(PartnerTypes.PartnerA, StringComparison.InvariantCultureIgnoreCase))
             {
                 order.ContactFirstName = orderDTO.ContactFirstName;
                 order.ContactLastName = orderDTO.ContactLastName;
                 order.ContactPhone = orderDTO.ContactPhone;
                 order.ContactMobile = orderDTO.ContactMobile;
                 order.ContactEmail = orderDTO.ContactEmail;
+                order.ContactTitle = orderDTO.ContactTitle;
             }
 
-            if (orderDTO.Partner == PartnerTypes.PartnerC)
+            if (orderDTO.Partner.Equals(PartnerTypes.PartnerC, StringComparison.InvariantCultureIgnoreCase ))
             {
                 order.ExposureID = orderDTO.ExposureID;
                 order.UDAC = orderDTO.UDAC;
@@ -77,6 +77,7 @@ namespace SpotzerAssignment.Service
             return order;
         }
 
+        #region Private Helpers
         private IEnumerable<Line> GetLinesFromOrder(OrderDTO orderDTO)
         {
             var lines = new List<Line>();

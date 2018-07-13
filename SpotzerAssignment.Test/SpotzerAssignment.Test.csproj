@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="Moq" Version="4.8.3" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SpotzerAssignment.Data\SpotzerAssignment.Data.csproj" />
+    <ProjectReference Include="..\SpotzerAssignment.Model\SpotzerAssignment.Model.csproj" />
     <ProjectReference Include="..\SpotzerAssignment.Service\SpotzerAssignment.Service.csproj" />
   </ItemGroup>
 
